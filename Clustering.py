@@ -3,10 +3,9 @@ from sklearn.cluster import KMeans
 from sklearn.dummy import DummyClassifier
 
 
-data = pd.read_excel("Temp.xlsx")
-data.drop(data.columns[0],axis=1,inplace=True)
-data.drop(data.columns[0],axis=1,inplace=True)
-data.drop(data.columns[0],axis=1,inplace=True)
+#data = pd.read_excel("Temp.xlsx")
+data = pd.read_excel("Temp_clean_FeSel.xlsx")
+
 print(data)
 
 # for column in data.columns:
@@ -72,5 +71,5 @@ for num_clusters in list(range(1,100)):
     cost.append(kmode.cost_)
 plt.plot(range(1, 100), cost, color ='g', linewidth ='3') 
 plt.xlabel("Value of K") 
-plt.ylabel("Sqaured Error (Cost)") 
+plt.ylabel("Squared Error (Cost)") 
 plt.show()
