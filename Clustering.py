@@ -74,6 +74,7 @@ plt.xlabel("Value of K")
 plt.ylabel("Squared Error (Cost)") 
 plt.show()
 
+kmode = KModes(n_clusters=16, init = "Cao", n_init = 1, verbose=1).fit_predict(data)
 #Number of cluster n-th
 n_th=5
 print(kmode[n_th])
