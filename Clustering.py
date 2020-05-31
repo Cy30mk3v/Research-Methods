@@ -6,7 +6,7 @@ from sklearn.dummy import DummyClassifier
 #data = pd.read_excel("Temp.xlsx")
 data = pd.read_excel("Temp_clean_FeSel.xlsx")
 
-print(data)
+#print(data)
 
 # for column in data.columns:
 #         #data[column].str.join(sep='*').str.get_dummies(sep='*')
@@ -57,12 +57,16 @@ from kmodes.kmodes import KModes
 # # random categorical data
 # #data = np.random.choice(20, (100, 10))
 
-# km = KModes(n_clusters=3, init='Huang', n_init=5, verbose=1)
+km = KModes(n_clusters=3, init='Huang', n_init=5, verbose=1)
 
-# clusters = km.fit_predict(data_clean)
+clusters = km.fit_predict(data_clean)
 
-# # Print the cluster centroids
-# print(km.cluster_centroids_)
+# Print the cluster centroids
+#print(km.cluster_centroids_)
+
+print("#####################################################################################################################################")
+
+print(clusters)
 
 cost = []
 for num_clusters in list(range(1,100)):
