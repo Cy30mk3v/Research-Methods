@@ -78,3 +78,22 @@ kmode = KModes(n_clusters=16, init = "Cao", n_init = 1, verbose=1).fit_predict(d
 #Number of cluster n-th
 n_th=5
 print(kmode[n_th])
+
+
+result=[]
+no_clusters=16
+kmode = KModes(n_clusters=no_clusters, init = "Cao", n_init = 1, verbose=1).fit(data)
+# #result=kmode.predict(data[1])
+# #Number of cluster n-th
+# n_th=5
+# print("------------")
+# print("above" + len(kmode.labels_))
+
+# #print(len(kmode))
+for i in range(0,no_clusters):
+    sub_result=[]
+    for j in range(0,len(data)):
+        if(kmode.labels_[j]==i):
+            sub_result.append(data.iloc[j,:])
+    result.append(sub_result)
+print(result[5])
