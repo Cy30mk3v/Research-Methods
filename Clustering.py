@@ -73,3 +73,7 @@ plt.plot(range(1, 100), cost, color ='g', linewidth ='3')
 plt.xlabel("Value of K") 
 plt.ylabel("Squared Error (Cost)") 
 plt.show()
+
+#Number of cluster n-th
+n_th=5
+print(kmode[n_th])
